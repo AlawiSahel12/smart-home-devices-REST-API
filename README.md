@@ -1,25 +1,25 @@
-Common commands to be used:
-`docker-compose run --rm app sh -c "python manage.py makemigrations"  `
-`docker-compose run --rm app sh -c "python manage.py makemigrations"  `
+🎬 Start the Application (run commands)
 
-`docker-compose run --rm app sh -c "python manage.py wait_for_db && python manage.py migrate"  `
+⭐️ `docker-compose build`
 
-`docker-compose run --rm app sh -c "python manage.py startapp xxxx"`
+🔹 When to use it:
 
-`docker-compose run --rm app sh -c "python manage.py  createsuperuser"`
+✅ Run it when you change the Dockerfile or dependencies (e.g., requirements.txt).
 
-`docker-compose build`
+✅ Before starting the project for the first time.
 
-`docker-compose up`
+⭐️ `docker-compose up`
 
-`docker-compose down`
+🔹 When to use it:
 
-`docker-compose run --rm app sh -c "python manage.py test"`
+✅ Run it every time you want to start the application.
 
-`docker-compose run --rm app sh -c "flake8"`
+⭐️ `docker-compose down`
 
-`docker-compose run --rm app sh -c "isort ."`
+🔹 When to use it:
 
-`docker-compose run --rm app sh -c "django-admin startproject app"`
+✅ When you want to fully stop and remove the containers.
+
+✅ If you need a fresh restart of the project.
 
 ---
