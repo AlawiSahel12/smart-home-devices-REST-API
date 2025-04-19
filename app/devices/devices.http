@@ -1,0 +1,54 @@
+### Create the lamp device (lamp-101)
+POST http://localhost:8000/api/devices/
+Content-Type: application/json
+
+{
+  "id": "lamp-101",
+  "type": "lamp",
+  "state": "off"
+}
+
+###
+
+### Create the thermostat device (thermo-202)
+POST http://localhost:8000/api/devices/
+Content-Type: application/json
+
+{
+  "id": "thermo-202",
+  "type": "thermostat",
+  "state": "22°C"
+}
+### List all devices
+GET http://localhost:8000/api/devices/
+Accept: application/json
+
+###
+
+### Get thermostat status
+GET http://localhost:8000/api/devices/thermo-202/
+Accept: application/json
+
+###
+
+### Turn on the lamp
+PUT http://localhost:8000/api/devices/lamp-101/
+Content-Type: application/json
+
+{
+  "id": "lamp-101",
+  "type": "lamp",
+  "state": "on"
+}
+
+###
+
+### Set thermostat to 24°C
+PUT http://localhost:8000/api/devices/thermo-202/
+Content-Type: application/json
+
+{
+  "id": "thermo-202",
+  "type": "thermostat",
+  "state": "24°C"
+}
